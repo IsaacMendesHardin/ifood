@@ -1,0 +1,18 @@
+places = [
+    {"place":"F", "rating":5,"range": 1.6},
+    {"place":"E", "rating":4.9,"range": 2.5},
+    {"place":"C", "rating":4.9,"range": 1.7},
+    {"place":"A", "rating":4.5,"range": 0.5},
+    {"place":"B", "rating":4.2,"range": 1.8},
+    {"place":"D", "rating":3.0,"range": 1.3}
+
+]    
+
+
+def show_up(i):
+    return  i["rating"], -i["range"]
+def arrange(places):
+    places.sort(reverse=True, key=show_up)
+    return places
+
+print(arrange(places))
